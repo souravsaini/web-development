@@ -1,0 +1,77 @@
+/* ########### Element Tags ##########  */
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+h1{
+  padding-top: 50px;
+  font-size: 5rem;
+  font-family: 'Sacramento', cursive;
+  margin-bottom: 0;
+  color: #66BFBF;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  color: #66BFBF;
+}
+
+h3 {
+  color: #11999E;
+}
+
+a {
+  color: #11999E;
+}
+
+/* Classes */
+
+.top-container {
+  background-color: #d4f3ef;
+  padding-top: 50px;
+  position: relative;
+}
+
+.top-cloud {
+  position: absolute;
+  right: 450px;
+}
+
+.bottom-cloud {
+  position: absolute;
+  left: 450px;
+
+}
+
+.profile-img {
+  height: 300px;
+  width: 200px;
+}
+
+.skills-img-1 {
+  height: 300px;
+  width: 25%;
+  float: left;
+}
+
+.skills-img-2 {
+  height: 300px;
+  width: 25%;
+}
+
+.subtitle {
+  font-weight: normal;
+}
+
+.skill-row {
+  width: 40%;
+  margin: 100px auto;
+  text-align: left;
+  line-height: 2;
+}
