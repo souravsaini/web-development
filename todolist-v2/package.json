@@ -1,5 +1,5 @@
 {
-  "name": "ejs-challenge",
+  "name": "todolist-v1",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,9 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "ejs": "^2.6.1",
-    "express": "^4.16.3",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
     "lodash": "^4.17.15",
     "mongoose": "^5.9.16"
   }
