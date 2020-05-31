@@ -103,12 +103,12 @@ app.get('/register', function(req, res) {
 })
 
 app.get('/secrets', function(req, res) {
-  User.find({"secret": {$ne:null}}, function(err, users) {
+  User.find({"secret": {$ne:null}}, function(err, user) {
     if (err) {
       console.log(err)
     } else {
-      if (users) {
-        res.render("secrets", {usersWithSecret: users})
+      if (user) {
+        res.render("secrets", {usersWithSecret: user})
       }
     }
   })  //where secret field is not null
