@@ -508,5 +508,58 @@ body {
 }
 .work-modal_close:hover {
   color: red;
+}
 
+/* contact */
+.contact-container {
+  max-width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-row-gap: 1rem;
+}
+.contact-info {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.contact-item {
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+.contact-item_icon {
+  font-size: 3rem;
+  color: var(--yellow);
+}
+.contact-item_title {
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+  letter-spacing: 0.25rem;
+  font-style: italic;
+}
+.contact-item_text {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+@media screen and (min-width: 768px) {
+  .contact-info {
+    grid-template-columns: repeat(3, 1fr);
+    order: -1;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .contact-info {
+    grid-template-columns: 1fr;
+    order: 0;
+  }
+  .contact-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 2rem;
+  }
+  .contact-map {
+    align-self: center;
+  }
 }

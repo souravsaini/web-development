@@ -57,6 +57,23 @@ class UI {
     document.querySelector(".input-lastname").value = "";
     document.querySelector(".input-email").value = "";
   }
+
+  showModal(event) {
+    event.preventDefault();
+    if(event.target.parentElement.classList.contains("work-item_icon")) {
+      let id = event.target.parentElement.dataset.id;
+
+      const modal = document.querySelector(".work-modal");
+      const modalItem = document.querySelector(".work-modal_item");
+
+      modal.classList.add("work-modal-show");
+      modalItem.style.backgroundImage = `url(img/work-${id}.jpeg)`;
+    }
+  }
+
+  closeModal() {
+    document.querySelector(".work-modal").classList.remove("work-modal-show");
+  }
 }
 
 
@@ -95,6 +112,19 @@ function eventListeners() {
       ui.showFeedback("some form values empty", "error");
     }
   })
+
+  //display modal
+  const links = document.querySelectorAll(".work-item_icon");
+  links.forEach( link => {
+    link.addEventListener("click", event => {
+      ui.showModal(event);
+    })
+  })
+
+  //hide model
+  document.querySelector(".work-modal_close").addEventListener("click", () => {
+    ui.closeModal();
+  })
 }
 
 
@@ -103,11 +133,3 @@ function Customer(name, lastname, email) {
   this.lastname = lastname;
   this.email = email;
 }
-
-//display modal
-const links = document.querySelectorAll(".work-item_icon");
-links.forEach( link => {
-  link.addEventListener("click", event => {
-    ui.showModal(event);
-  })
-})
