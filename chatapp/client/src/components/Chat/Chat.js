@@ -16,7 +16,7 @@ const Chat = ({location}) => {
   const [message, setMessage] = useState([]);
   const [messages, setMessages] = useState([]);
 
-  const ENDPOINT = "localhost:5000"
+  const ENDPOINT = "https://freechatapplication.herokuapp.com"
 
   useEffect( () => {
     const { name, room } = queryString.parse(location.search);
@@ -41,7 +41,7 @@ const Chat = ({location}) => {
     socket.on("roomData", ({users}) =>{
       setUsers(users)
     });
-  }, []);
+  }, [messages]);
 
   const sendMessage = event => {
     event.preventDefault();
